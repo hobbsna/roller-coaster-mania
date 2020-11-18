@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 /* Add your custom CSS declarations below  */
 #homepage-rollerCoaster {
     background-image: url(/images/RollerCoasterBackground.jpg);
@@ -14,6 +15,15 @@ img {
     max-height: 100%;
 }
 
-iframe { 
-    border: none; 
+iframe {
+    border: none;
+}
+
+h1, h2, h5, a.home {
+    font-family: 'Sansita Swashed', cursive;
+}
+
+
+p, a.nav-link {
+    font-family: 'Lato', sans-serif;
 }
