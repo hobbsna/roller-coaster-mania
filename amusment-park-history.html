@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+    <!--Metadata-->
     <meta charset="UTF-8">
     <meta name="description" content="A brief history of events and discoveries that led to where we are now.">
     <meta name="author" content="Nathan Hobbs">
@@ -55,6 +56,7 @@
             </ul>
         </div>
     </nav>
+    <!--End navigation-->
 
     <!--Breadcrumbs -->
     <nav aria-label="breadcrumb">
@@ -67,12 +69,12 @@
 
     <h1 class="text-center m-3">Amusement Park History</h1>
 
-    <!--Button to hide/show all at once-->
+    <!--Button to hide/show all following dropdown items at once-->
     <div class="text-center">
-        <button type="button" class="btn btn-success mb-3 ">Toggle all timeline events at once</button>
+        <button type="button" class="btn btn-success mb-3" id="togglerButton">Toggle all timeline events at once</button>
     </div>
 
-
+    <!--Collapsible dropdown for Amusement Park History timeline, listed chronologically.-->
     <div class="accordion" id="accordionExample">
         <div class="card">
             <div class="card-header" id="headingOne">
@@ -83,7 +85,7 @@
                 </h2>
             </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
                 <div class="card-body">
                     Europe introduces "Pleasure Gardens," which include flower gardens, fountains, bowling, music, dancing, bowling, and a few primitive amusement rides.
                 </div>
@@ -509,12 +511,23 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div><!--End collapsible dropdowns-->
 
     <!-- jQuery and Bootstrap links - do not delete! -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="js/bootstrap.bundle.min.js"></script>
     <!-- end of do not delete -->
+    
+    <!--Toggle all timeline events with the press of a button     -->
+    <!--Essentially trying to toggle aria-expanded = false-->
+    <!--  Old Code: $("#togglerButton").click(function() {
+                        $("h2 > button").toggleClass("show");    
+                    });-->
+    <script>
+        $("#togglerButton").click(function() {
+            $("div.card > div.collapse").toggleClass("show");    
+        });
+    </script>
 </body>
 
 </html>
